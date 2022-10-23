@@ -41,16 +41,13 @@ export default definePlugin({
 
         async execute(args) {
             let sub = "cuteanimeboys";
-            console.error(args);
             if (args.length > 0) {
                 const v = args[0].value as any as boolean;
                 if (v) {
                     sub = "animecatboys";
                 }
             }
-
-            console.error(sub);
-
+            
             return {
                 content: await fetchReddit(sub),
             };
