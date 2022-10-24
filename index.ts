@@ -1,5 +1,5 @@
-import { ApplicationCommandOptionType } from "../api/Commands";
-import definePlugin from "../utils/types";
+import { ApplicationCommandOptionType } from "../../api/Commands";
+import definePlugin from "../../utils/types";
 
 function rand(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -47,7 +47,7 @@ export default definePlugin({
                     sub = "animecatboys";
                 }
             }
-            
+
             return {
                 content: await fetchReddit(sub),
             };
